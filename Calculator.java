@@ -4,7 +4,7 @@ import javax.swing.*;
 import javax.swing.event.*;
  
 class Calculator extends JFrame {
-    private final Font BIGGER_FONT = new Font("monspaced",Font.PLAIN, 20);
+    private final Font BIG_FONT = new Font("monspaced",Font.PLAIN, 20);
     private JTextField textfield;
     private boolean number = true;
     private String equalOp = "=";
@@ -13,7 +13,7 @@ class Calculator extends JFrame {
     public Calculator() {
         textfield = new JTextField("", 12);
         textfield.setHorizontalAlignment(JTextField.RIGHT);
-        textfield.setFont(BIGGER_FONT);
+        textfield.setFont(BIG_FONT);
         ActionListener numberListener = new NumberListener();
         String buttonOrder = "1234567890 ";
         JPanel buttonPanel = new JPanel();
@@ -25,7 +25,7 @@ class Calculator extends JFrame {
             } else {
                 JButton button = new JButton(key);
                 button.addActionListener(numberListener);
-                button.setFont(BIGGER_FONT);
+                button.setFont(BIG_FONT);
                 buttonPanel.add(button);
             }
         }
@@ -36,7 +36,7 @@ class Calculator extends JFrame {
         for (int i = 0; i < opOrder.length; i++) {
             JButton button = new JButton(opOrder[i]);
             button.addActionListener(operatorListener);
-            button.setFont(BIGGER_FONT);
+            button.setFont(BIG_FONT);
             panel.add(button);
         }
         JPanel pan = new JPanel();
@@ -157,7 +157,7 @@ class Calculator extends JFrame {
         }
     }
 }
-class SwingCalculator {
+class Calculator {
     public static void main(String[] args) {
         JFrame frame = new Calculator();
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
