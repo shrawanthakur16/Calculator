@@ -1,6 +1,5 @@
 /**
 Copyright @ Shrawan
-
 Code of Scientific Calculator
 **/
 import java.awt.*;
